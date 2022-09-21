@@ -17,7 +17,7 @@ export default function Card({ data }) {
 
   return (
     <div className="card">
-      <div>
+      <div className="card-content">
         <img src={assets[data.id - 1]} alt={data.name} />
         <div className="card-info">
           <p>{data.name}</p>
