@@ -11,6 +11,7 @@ export default function Item({ data }) {
         </p>
         <h5> {data.product.price.toLocaleString()} UZS </h5>
       </div>
+      <h5>{(data.product.price * data.count).toLocaleString()} UZS</h5>
     </div>
   );
 }

@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 30px;
-  min-height: 400px;
+  height: 100vh;
 }
 
 .complete img {

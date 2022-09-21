@@ -4,7 +4,7 @@ import Card from "./Card";
 import { useSelector } from "react-redux";
 import { useCallback, useEffect } from "react";
 import useWebApp from "../../hooks/useWebApp";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
   const cart = useSelector((store) => store.cart);
@@ -45,6 +45,7 @@ export default function Home() {
           <Card data={item} key={item.id} />
         ))}
       </div>
+      <Link to="/checkout">Kettik</Link>
     </div>
   );
 }

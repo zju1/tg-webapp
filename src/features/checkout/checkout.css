@@ -61,3 +61,9 @@
   margin-top: 3px;
   color: var(--tg-theme-hint-color);
 }
+
+.item > h5 {
+  font: 600 16px sans-serif;
+  margin-top: 3px;
+  color: var(--tg-theme-text-color);
+}
