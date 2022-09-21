@@ -25,20 +25,13 @@ export default function Card({ data }) {
         </div>
       </div>
       <div
-        className={`card_buttons ${
-          inCart > 0 ? "card_buttons-two_column" : ""
-        }`}
+        className={`card_buttons`}
       >
-        {inCart !== 0 && (
-          <>
-            <button onClick={handleDecrease} className="btn-decrease">
-              -
-            </button>
-            <div className="count">{inCart}</div>
-          </>
-        )}
-        {}
-        <button onClick={handleIncrease} className="btn-increase">
+        <button onClick={handleDecrease} className="btn-decrease">
+          -
+        </button>
+        <div className="count">{inCart}</div>
+        <button onClick={handleIncrease} className={`btn-increase ${inCart ? 'collapsed' : ''}`}>
           {inCart === 0 ? "Sebetke qosıw" : "+"}
         </button>
       </div>
