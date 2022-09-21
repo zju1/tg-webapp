@@ -45,7 +45,6 @@ export default function Home() {
           <Card data={item} key={item.id} />
         ))}
       </div>
-      <Link to="/checkout">Kettik</Link>
     </div>
   );
 }
