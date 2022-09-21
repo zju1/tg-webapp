@@ -47,9 +47,12 @@ const appSlice = createSlice({
         );
       }
     },
+    clear(state) {
+      state.cart = [];
+    },
   },
 });
 
 export default appSlice.reducer;
 
-export const { increase, decrease } = appSlice.actions;
+export const { increase, decrease, clear } = appSlice.actions;

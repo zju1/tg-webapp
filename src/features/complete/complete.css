@@ -1,0 +1,29 @@
+.complete {
+  background-color: var(--tg-theme-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 400px;
+}
+
+.complete img {
+  max-width: 300px;
+}
+
+.complete p {
+  font: 700 14px sans-serif;
+  text-align: center;
+  line-height: 24px;
+  color: var(--tg-theme-text-color);
+  text-transform: uppercase;
+}
+
+.complete a {
+  font: 500 14px sans-serif;
+  color: var(--tg-theme-link-color);
+  text-decoration: none;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
