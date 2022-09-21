@@ -39,7 +39,7 @@ export default function Card({ data }) {
         )}
         {}
         <button onClick={handleIncrease} className="btn-increase">
-          {inCart === 0 ? "Add to cart" : "+"}
+          {inCart === 0 ? "Sebetke qosıw" : "+"}
         </button>
       </div>
     </div>

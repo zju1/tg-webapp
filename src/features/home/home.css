@@ -37,8 +37,8 @@
 .card p {
   color: var(--tg-theme-text-color);
   font: 400 12px sans-serif;
-  margin-bottom: 5px;
   align-self: flex-start;
+  height: 40px;
 }
 
 .card h5 {
