@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { decrease, increase } from "../../app/appSlice";
+import assets from "../../assets";
 import useInCart from "../../hooks/useInCart";
 
 export default function Card({ data }) {
@@ -16,10 +17,12 @@ export default function Card({ data }) {
 
   return (
     <div className="card">
-      <img src={data.image} alt={data.name} />
-      <div className="card-info">
-        <p>{data.name}</p>
-        <h5>{data.price.toLocaleString()} UZS</h5>
+      <div>
+        <img src={assets[data.id - 1]} alt={data.name} />
+        <div className="card-info">
+          <p>{data.name}</p>
+          <h5>{data.price.toLocaleString()} UZS</h5>
+        </div>
       </div>
       <div
         className={`card_buttons ${
@@ -28,12 +31,10 @@ export default function Card({ data }) {
       >
         {inCart !== 0 && (
           <>
-          <button onClick={handleDecrease} className="btn-decrease">
-            -
-          </button>
-          <div className="count">
-            {inCart}
-          </div>
+            <button onClick={handleDecrease} className="btn-decrease">
+              -
+            </button>
+            <div className="count">{inCart}</div>
           </>
         )}
         {}
