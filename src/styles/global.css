@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: var(--tg-theme-bg-color);
+  background-color: var(--tg-theme-secondary-bg-color);
 }
 
 .container {
