@@ -2,10 +2,27 @@ import { useSelector } from "react-redux";
 import "./checkout.css";
 import Item from "./Item";
 import { useNavigate } from "react-router-dom";
+import useWebApp from "../../hooks/useWebApp";
+import { useCallback, useEffect } from "react";
 
 export default function Checkout() {
   const navigate = useNavigate();
   const items = useSelector((store) => store.cart);
+  const webApp = useWebApp();
+
+  const goback = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  useEffect(() => {
+    webApp.BackButton.onClick(goback);
+    webApp.BackButton.show();
+
+    return () => {
+      webApp.BackButton.offClick(goback);
+      webApp.BackButton.hide();
+    };
+  }, [goback, webApp.BackButton]);
 
   return (
     <div className="container">

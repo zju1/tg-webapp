@@ -4,7 +4,7 @@ import Card from "./Card";
 import { useSelector } from "react-redux";
 import { useCallback, useEffect } from "react";
 import useWebApp from "../../hooks/useWebApp";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const cart = useSelector((store) => store.cart);
@@ -21,6 +21,8 @@ export default function Home() {
 
   useEffect(() => {
     webApp.MainButton.onClick(goCheckout);
+
+    return () => webApp.MainButton.offClick(goCheckout);
   }, [goCheckout, webApp.MainButton]);
 
   useEffect(() => {
